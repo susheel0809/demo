@@ -1,20 +1,18 @@
 package api.demo;
 
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 
+@CrossOrigin("*")
+@RequestMapping(value = "/api/email", produces = "application/hal+json")
 @RestController
-@RequestMapping(value = "/api/email")
 public class Email {
 
+    @RequestMapping(method = RequestMethod.GET)
     private ArrayList<String> getListOfUser() {
-
-
         final ArrayList<String> strings = new ArrayList<>();
         strings.add("good");
-
         return strings;
     }
 }
