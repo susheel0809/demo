@@ -15,4 +15,13 @@ public class Email {
         strings.add("good");
         return strings;
     }
+
+    @RequestMapping(method = RequestMethod.GET, value = "/user")
+    private ArrayList<String> getListOfUsers() {
+        final ArrayList<String> strings = new ArrayList<>();
+        strings.add("good");
+        return strings;
+    }
+
+
 }
